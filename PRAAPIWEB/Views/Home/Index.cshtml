@@ -2,8 +2,7 @@
 @{
     ViewData["Title"] = "Главная";
 }
-<link rel="stylesheet" href="~/css/site.css" />
-
+<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
 
 <div class="welcome-block">
     <div class="welcome-text">
@@ -18,8 +17,16 @@
     <span>Xush kelibsiz</span>
 </div>
 
-    <h2>Как мы можем помочь?</h2>
-    <p>Пункт помощи предоставляет комплексную поддержку мигрантам: от изучения языка и юридической помощи до поиска работы и жилья. Наша цель — сделать вашу адаптацию максимально комфортной.</p>
+<div class="help-section">
+    <div class="help-container">
+        <h2 class="help-title">Как мы можем помочь?</h2>
+        <div class="help-divider"></div>
+        <p class="help-text">
+            Пункт помощи предоставляет комплексную поддержку мигрантам: от изучения языка
+            и юридической помощи до поиска работы и жилья. Наша цель — сделать вашу адаптацию
+            максимально комфортной.
+        </p>
+    </div>
 </div>
 
 <h3 class="services-title">Наши Услуги</h3>
@@ -75,10 +82,7 @@
 <div class="success-stories">
     <h2>Истории Успеха</h2>
     <div class="stories-grid">
-        <div class="story highlighted">
-            <p><em>"Благодаря 'Пункт помощи' я быстро нашел работу и оформил все необходимые документы. Это изменило мою жизнь!"</em></p>
-            <p><strong>Ахмед, Москва</strong></p>
-        </div>
+
         <div class="story">
             <p><em>"Изучение русского языка стало намного проще с их онлайн-материалами. Теперь я могу свободно общаться."</em></p>
             <p><strong>Наргиза, Санкт-Петербург</strong></p>
@@ -99,5 +103,6 @@
             <p><em>"Карта с адресами врачей и юристов очень выручила в незнакомом городе."</em></p>
             <p><strong>Гульмира, Нижний Новгород</strong></p>
         </div>
+
     </div>
 </div>

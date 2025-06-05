@@ -1,15 +1,11 @@
 ﻿namespace PRAAPIWEB.Models
 {
-    public class Testimage
+    public class TestImage
     {
         public int Id { get; set; }
-
-        public int? TestId { get; set; }
-
-        public string ImageUrl { get; set; } = null!;
-
-        public string? Description { get; set; }
-
-        public DateTime? CreatedAt { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; } = "{}"; // Используйте Description вместо Metadata
+        public string ImageUrl { get; set; }
+        public string TestType { get; set; }
     }
 }

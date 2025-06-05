@@ -22,8 +22,16 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/alepi/source/repos/PRAAPIWEB/PRAAPIWEB/Views/Account/Profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxQcm9maWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/alepi/source/repos/PRAAPIWEB/PRAAPIWEB/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alepi/source/repos/PRAAPIWEB/PRAAPIWEB/Views/Health/Medical.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGVhbHRoXE1lZGljYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/alepi/source/repos/PRAAPIWEB/PRAAPIWEB/Views/Home/Index.cshtml]
@@ -34,12 +42,56 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/alepi/source/repos/PRAAPIWEB/PRAAPIWEB/Views/Housing/Accommodation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG91c2luZ1xBY2NvbW1vZGF0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alepi/source/repos/PRAAPIWEB/PRAAPIWEB/Views/Jobs/JobSearch.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9ic1xKb2JTZWFyY2guY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alepi/source/repos/PRAAPIWEB/PRAAPIWEB/Views/Language/Language.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGFuZ3VhZ2VcTGFuZ3VhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alepi/source/repos/PRAAPIWEB/PRAAPIWEB/Views/LegalAid/LegalHelp.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVnYWxBaWRcTGVnYWxIZWxwLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alepi/source/repos/PRAAPIWEB/PRAAPIWEB/Views/Map/HelpMap.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFwXEhlbHBNYXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/alepi/source/repos/PRAAPIWEB/PRAAPIWEB/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/alepi/source/repos/PRAAPIWEB/PRAAPIWEB/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alepi/source/repos/PRAAPIWEB/PRAAPIWEB/Views/SocialAid/SocialSupport.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU29jaWFsQWlkXFNvY2lhbFN1cHBvcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alepi/source/repos/PRAAPIWEB/PRAAPIWEB/Views/Support/Forum.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcG9ydFxGb3J1bS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alepi/source/repos/PRAAPIWEB/PRAAPIWEB/Views/Tests/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVzdHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alepi/source/repos/PRAAPIWEB/PRAAPIWEB/Views/Tests/Result.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVzdHNcUmVzdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alepi/source/repos/PRAAPIWEB/PRAAPIWEB/Views/Tests/Start.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVzdHNcU3RhcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alepi/source/repos/PRAAPIWEB/PRAAPIWEB/Views/Tests/TestResult.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVzdHNcVGVzdFJlc3VsdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/alepi/source/repos/PRAAPIWEB/PRAAPIWEB/Views/_ViewImports.cshtml]

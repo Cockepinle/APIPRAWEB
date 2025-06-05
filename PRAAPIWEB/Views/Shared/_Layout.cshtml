@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿@{
+    IgnoreSection("Styles");
+}
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="utf-8" />
@@ -20,7 +23,7 @@
 
             <nav class="d-flex align-items-center flex-wrap" style="gap: 18px; font-size: 14px;">
                 <a class="text-decoration-none text-dark" asp-controller="Home" asp-action="Index">Главная</a>
-                <a class="text-decoration-none text-dark" asp-controller="Language" asp-action="Index">Изучение языка</a>
+                <a class="text-decoration-none text-dark" asp-controller="Tests" asp-action="Index">Изучение языка</a>
                 <a class="text-decoration-none text-dark" asp-controller="LegalAid" asp-action="Index">Юридическая помощь</a>
                 <a class="text-decoration-none text-dark" asp-controller="Jobs" asp-action="Index">Работа</a>
                 <a class="text-decoration-none text-dark" asp-controller="Support" asp-action="Index">Поддержка</a>
@@ -31,13 +34,14 @@
 
                 @if (User.Identity?.IsAuthenticated == true)
                 {
-                    <a class="text-decoration-none text-dark" asp-controller="Account" asp-action="Logout">Выйти</a>
+                    <a class="text-decoration-none text-dark" asp-controller="Account" asp-action="Profile">Профиль</a>
                 }
                 else
                 {
                     <a class="text-decoration-none text-dark" asp-controller="Account" asp-action="Login">Вход</a>
                     <a class="text-decoration-none text-dark" asp-controller="Account" asp-action="Register">Регистрация</a>
                 }
+
             </nav>
         </div>
     </header>

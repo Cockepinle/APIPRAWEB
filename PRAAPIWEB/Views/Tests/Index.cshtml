@@ -1,0 +1,11 @@
+﻿@model List<PRAAPIWEB.Models.TestDto>
+
+@foreach (var test in Model)
+{
+    <div>
+        <h3>@test.Name</h3>
+        <img src="@test.ImageUrl" />
+        <p>@test.Description</p>
+        <a href="/Tests/Start/@test.Id">Пройти тест</a>
+    </div>
+}

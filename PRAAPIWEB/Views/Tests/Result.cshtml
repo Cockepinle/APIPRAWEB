@@ -1,0 +1,51 @@
+﻿@model TestResultViewModel
+
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-header bg-primary text-white">
+            <h3>Результаты теста: @Model.TestName</h3>
+        </div>
+        <div class="card-body">
+            <div class="alert @((Model.Score * 100 / Model.TotalQuestions) >= 50 ? "alert-success" : "alert-danger")">
+                <h4 class="alert-heading">
+                    Ваш результат: @Model.Score из @Model.TotalQuestions
+                </h4>
+                <p>Процент правильных ответов: @((Model.Score * 100 / Model.TotalQuestions).ToString("0"))%</p>
+            </div>
+
+            <h4 class="mt-4">Детализация ответов:</h4>
+            <div class="list-group">
+                @foreach (var question in Model.Questions)
+                {
+                    <div class="list-group-item @(question.IsCorrect ? "list-group-item-success" : "list-group-item-danger")">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">@question.QuestionText</h5>
+                            <span class="badge @(question.IsCorrect ? "bg-success" : "bg-danger")">
+                                @(question.IsCorrect ? "✓" : "✗")
+                            </span>
+                        </div>
+                        <p class="mb-1">Ваш ответ: @question.UserAnswer</p>
+                        <p class="mb-1">Правильный ответ: @question.CorrectAnswer</p>
+                        @if (!string.IsNullOrEmpty(question.Explanation))
+                        {
+                            <small>@question.Explanation</small>
+                        }
+                    </div>
+                }
+            </div>
+
+            <div class="mt-4">
+                <a href="@Url.Action("Start", new { id = Model.TestId })"
+                   class="btn btn-primary">
+                    Пройти тест снова
+                </a>
+                <a href="@Url.Action("Index")" class="btn btn-secondary">
+                    К списку тестов
+                </a>
+                <a href="@Url.Action("Profile", "Account")" class="btn btn-info">
+                    В профиль
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

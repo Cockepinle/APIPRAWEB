@@ -25,17 +25,26 @@
             $('#registerForm').submit(function (e) {
                 e.preventDefault();
                 $.post($(this).attr('action'), $(this).serialize())
-                    .done(function () {
-                        $('#authMessage')
-                            .removeClass('d-none alert-danger')
-                            .addClass('alert alert-success')
-                            .text('Регистрация прошла успешно. Теперь вы можете войти.');
+                    .done(function (response) {
+                        if (response.success) {
+                            // Показываем сообщение и перенаправляем на вход
+                            $('#authMessage')
+                                .removeClass('d-none alert-danger')
+                                .addClass('alert alert-success')
+                                .text(response.message);
+
+                            // Опционально: перенаправление через 3 секунды
+                            setTimeout(() => {
+                                window.location.href = '/Account/Login';
+                            }, 3000);
+                        }
                     })
                     .fail(function (xhr) {
                         $('#authMessage')
                             .removeClass('d-none alert-success')
                             .addClass('alert alert-danger')
-                            .text('Ошибка регистрации: ' + (xhr.responseText || 'Проверьте данные.'));
+                            .text('Ошибка регистрации: ' +
+                                (xhr.responseJSON?.message || xhr.responseText || 'Проверьте данные.'));
                     });
             });
         });

@@ -1,37 +1,29 @@
-﻿@{
-    ViewData["Title"] = "Вход";
-}
+﻿@model PRAAPIWEB.Models.LoginModel
 
 <h2>Вход</h2>
 
-<div id="authMessage" class="alert d-none" role="alert"></div>
+<form asp-action="Login" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
-<form id="loginForm" method="post" asp-controller="Account" asp-action="Login">
-    <div class="mb-3">
-        <input type="email" name="Email" class="form-control" placeholder="Email" required />
+    <div class="form-group">
+        <label asp-for="Email"></label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
     </div>
-    <div class="mb-3">
-        <input type="password" name="Password" class="form-control" placeholder="Пароль" required />
+
+    <div class="form-group">
+        <label asp-for="Password"></label>
+        <input asp-for="Password" type="password" class="form-control" />
+        <span asp-validation-for="Password" class="text-danger"></span>
     </div>
-    <button type="submit" class="btn btn-primary w-100">Войти</button>
+
+    <div class="form-group">
+        <div class="checkbox">
+            <label asp-for="RememberMe">
+                <input asp-for="RememberMe" /> @Html.DisplayNameFor(m => m.RememberMe)
+            </label>
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Войти</button>
 </form>
-
-@section Scripts {
-    <script>
-        $(function () {
-            $('#loginForm').submit(function (e) {
-                e.preventDefault();
-                $.post($(this).attr('action'), $(this).serialize())
-                    .done(function () {
-                        window.location.href = '/'; // Перенаправить на главную или профиль
-                    })
-                    .fail(function (xhr) {
-                        $('#authMessage')
-                            .removeClass('d-none alert-success')
-                            .addClass('alert alert-danger')
-                            .text('Ошибка входа: ' + (xhr.responseText || 'Проверьте email и пароль.'));
-                    });
-            });
-        });
-    </script>
-}

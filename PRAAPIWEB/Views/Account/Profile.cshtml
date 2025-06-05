@@ -1,0 +1,97 @@
+﻿@model PRAAPIWEB.Models.ProfileViewModel
+
+@{
+    ViewData["Title"] = "Мой профиль";
+}
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-4">
+            <!-- Блок информации о пользователе -->
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h4>Личные данные</h4>
+                </div>
+                <div class="card-body">
+                    <div class="text-center mb-3">
+                        <img src="https://via.placeholder.com/150" class="rounded-circle" alt="Аватар">
+                    </div>
+                    <div class="mb-2">
+                        <strong>Имя:</strong> @Model.User.Name
+                    </div>
+                    <div class="mb-2">
+                        <strong>Email:</strong> @Model.User.Email
+                    </div>
+                    <div class="mb-2">
+                        <strong>ID:</strong> @Model.User.Id
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-8">
+            <!-- Блок истории тестов -->
+            <div class="card">
+                <div class="card-header bg-info text-white">
+                    <h4>История прохождения тестов</h4>
+                </div>
+                <div class="card-body">
+                    @if (Model.TestHistory.Any())
+                    {
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Тест</th>
+                                        <th>Результат</th>
+                                        <th>Дата прохождения</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var test in Model.TestHistory)
+                                    {
+                                        <tr>
+                                            <td>@test.TestName</td>
+                                            <td>@test.Score баллов</td>
+                                            <td>@test.CompletedAt.ToString("dd.MM.yyyy HH:mm")</td>
+                                            <td>
+                                                <a href="@Url.Action("TestResult", "Tests", new { testId = test.TestId })"
+                                                   class="btn btn-sm btn-outline-primary">
+                                                    Подробнее
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="alert alert-info">
+                            Вы еще не проходили ни одного теста.
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Styles {
+    <style>
+        .card {
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .card-header {
+            font-weight: 500;
+        }
+
+        .table th {
+            background-color: #f8f9fa;
+        }
+    </style>
+}
